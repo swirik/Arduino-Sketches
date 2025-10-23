@@ -73,7 +73,7 @@ unsigned long lastTouchMs = 0;
 static inline float clamp01(float x){ if(x<0) return 0; if(x>1) return 1; return x; }
 
 static inline int mapconstrain(long v, long in_min, long in_max, long out_min, long out_max) {
-  // linear map + clamp
+
   v = (v - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
   if (v < out_min) v = out_min;
   if (v > out_max) v = out_max;
